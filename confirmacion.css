@@ -1,0 +1,229 @@
+/* ── FONDO CON FOTO ── */
+body {
+  min-height: 100vh;
+  background-color: #080f1a;
+}
+
+.pagina {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 5rem;
+  animation: fadeUp 1s ease both;
+  position: relative;
+
+  background-image: url('fotos/sofia.png');
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+}
+
+.pagina::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(8, 15, 26, 0.55) 0%,
+    rgba(8, 15, 26, 0.45) 40%,
+    rgba(8, 15, 26, 0.75) 75%,
+    rgba(8, 15, 26, 0.95) 100%
+  );
+  z-index: 0;
+}
+
+.pagina > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* ── ENCABEZADO ── */
+#encabezado {
+  text-align: center;
+  padding: 4rem 2rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.nombre-script {
+  font-family: 'Great Vibes', cursive;
+  font-size: clamp(2.8rem, 10vw, 5rem);
+  font-weight: 400;
+  color: #ffffff;
+  line-height: 1.1;
+  text-shadow: 0 2px 20px rgba(0,0,0,0.5);
+}
+
+.fecha-chica {
+  font-size: 0.75rem;
+  letter-spacing: 0.4em;
+  color: #7aaee8;
+  opacity: 0.8;
+  margin-top: 0.3rem;
+}
+
+.linea-decorativa {
+  width: 60px;
+  height: 1px;
+  background: linear-gradient(to right, transparent, #7aaee8, transparent);
+  margin: 0.3rem 0;
+}
+
+/* ── FOTO — ya no se muestra como sección ── */
+#foto-sofia {
+  display: none;
+}
+
+/* ── CONTADOR ── */
+#contador {
+  padding: 1.5rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.contador-label {
+  font-size: 0.7rem;
+  letter-spacing: 0.4em;
+  text-transform: uppercase;
+  color: #7aaee8;
+  opacity: 0.8;
+}
+
+.contador-bloques {
+  display: flex;
+  gap: 0;
+  flex-wrap: nowrap;
+  justify-content: center;
+  border: 1px solid rgba(122, 174, 232, 0.3);
+  border-radius: 4px;
+  overflow: hidden;
+  backdrop-filter: blur(8px);
+  background: rgba(8, 15, 26, 0.4);
+  box-shadow: 0 0 30px rgba(91, 143, 219, 0.1);
+}
+
+.bloque {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.3rem;
+  padding: 1.2rem 1.6rem;
+  border-right: 1px solid rgba(122, 174, 232, 0.15);
+  transition: background 0.3s;
+}
+
+.bloque:hover {
+  background: rgba(91, 143, 219, 0.12);
+}
+
+.bloque:last-child {
+  border-right: none;
+}
+
+.bloque span {
+  font-size: clamp(1.6rem, 5vw, 2.8rem);
+  font-weight: 200;
+  color: #ffffff;
+  letter-spacing: 0.05em;
+  line-height: 1;
+}
+
+.bloque p {
+  font-size: 0.6rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: #7aaee8;
+  opacity: 0.7;
+}
+
+/* ── CONFIRMACIÓN ── */
+#confirmacion {
+  text-align: center;
+  padding: 2rem 2rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.2rem;
+}
+
+.confirmacion-label {
+  font-size: 0.75rem;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+  color: #e8edf5;
+  opacity: 0.6;
+}
+
+.whatsapp-btn {
+  display: inline-block;
+  padding: 0.9rem 2.5rem;
+  border: 1px solid rgba(122, 174, 232, 0.5);
+  color: #7aaee8;
+  text-decoration: none;
+  font-size: 0.85rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  border-radius: 2px;
+  backdrop-filter: blur(4px);
+  background: rgba(8, 15, 26, 0.3);
+  transition: background 0.3s, color 0.3s, box-shadow 0.3s;
+}
+
+.whatsapp-btn:hover {
+  background: #7aaee8;
+  color: #080f1a;
+  box-shadow: 0 0 20px rgba(122, 174, 232, 0.3);
+}
+
+/* ── DIRECCIÓN ── */
+.direccion-bloque {
+  margin-top: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.4rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(122, 174, 232, 0.15);
+  width: 100%;
+  max-width: 320px;
+}
+
+.direccion-texto {
+  font-size: 0.9rem;
+  color: #e8edf5;
+  letter-spacing: 0.12em;
+}
+
+.direccion-sub {
+  font-size: 0.72rem;
+  color: #e8edf5;
+  opacity: 0.5;
+  letter-spacing: 0.15em;
+}
+
+.mapa-btn {
+  margin-top: 0.5rem;
+  font-size: 0.72rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: #7aaee8;
+  text-decoration: none;
+  opacity: 0.7;
+  transition: opacity 0.3s;
+}
+
+.mapa-btn:hover {
+  opacity: 1;
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 400px) {
+  .bloque {
+    padding: 1rem 1.1rem;
+  }
+}
