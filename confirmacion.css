@@ -55,7 +55,7 @@ body {
 /* ── ENCABEZADO ── */
 #encabezado {
   text-align: center;
-  padding: 4rem 2rem 1.5rem;
+  padding: 6rem 2rem 1.5rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -71,11 +71,19 @@ body {
   text-shadow: 0 2px 20px rgba(0, 0, 0, 0.5);
 }
 
+.pre-titulo {
+  font-size: 0.75rem;
+  letter-spacing: 0.4em;
+  text-transform: uppercase;
+  color: #7aaee8;
+  opacity: 1;
+}
+
 .fecha-chica {
   font-size: 0.75rem;
   letter-spacing: 0.4em;
   color: #7aaee8;
-  opacity: 0.8;
+  opacity: 1;
   margin-top: 0.3rem;
 }
 
@@ -86,14 +94,14 @@ body {
   margin: 0.3rem 0;
 }
 
-/* ── FOTO — ya no se muestra como sección ── */
+/* ── FOTO — no se muestra como sección ── */
 #foto-sofia {
   display: none;
 }
 
 /* ── CONTADOR ── */
 #contador {
-  padding: 1.5rem 2rem;
+  padding: 2rem 2rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -105,7 +113,7 @@ body {
   letter-spacing: 0.4em;
   text-transform: uppercase;
   color: #7aaee8;
-  opacity: 0.8;
+  opacity: 1;
 }
 
 .contador-bloques {
@@ -152,13 +160,13 @@ body {
   letter-spacing: 0.3em;
   text-transform: uppercase;
   color: #7aaee8;
-  opacity: 0.7;
+  opacity: 1;
 }
 
 /* ── CONFIRMACIÓN ── */
 #confirmacion {
   text-align: center;
-  padding: 2rem 2rem 0;
+  padding: 2.5rem 2rem 0;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -170,7 +178,7 @@ body {
   letter-spacing: 0.35em;
   text-transform: uppercase;
   color: #e8edf5;
-  opacity: 0.6;
+  opacity: 0.85;
 }
 
 .whatsapp-btn {
@@ -216,7 +224,7 @@ body {
 .direccion-sub {
   font-size: 0.72rem;
   color: #e8edf5;
-  opacity: 0.5;
+  opacity: 0.6;
   letter-spacing: 0.15em;
 }
 
@@ -227,7 +235,7 @@ body {
   text-transform: uppercase;
   color: #7aaee8;
   text-decoration: none;
-  opacity: 0.7;
+  opacity: 0.85;
   transition: opacity 0.3s;
 }
 

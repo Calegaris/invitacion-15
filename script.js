@@ -15,28 +15,9 @@ function abrirSobre() {
 
 // ── SONIDO MÁGICO ──
 function sonidoMagico() {
-    const ctx = new (window.AudioContext || window.webkitAudioContext)();
-
-    const notas = [523, 659, 784, 1047, 1319];
-    notas.forEach((freq, i) => {
-        setTimeout(() => {
-            const osc = ctx.createOscillator();
-            const gain = ctx.createGain();
-
-            osc.connect(gain);
-            gain.connect(ctx.destination);
-
-            osc.type = 'sine';
-            osc.frequency.setValueAtTime(freq, ctx.currentTime);
-            osc.frequency.exponentialRampToValueAtTime(freq * 1.5, ctx.currentTime + 0.3);
-
-            gain.gain.setValueAtTime(0.18, ctx.currentTime);
-            gain.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + 0.5);
-
-            osc.start(ctx.currentTime);
-            osc.stop(ctx.currentTime + 0.5);
-        }, i * 80);
-    });
+    const audio = new Audio('audio/magia.mp3');
+    audio.volume = 0.8;
+    audio.play();
 }
 
 // ── PARTÍCULAS ──
