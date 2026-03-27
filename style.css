@@ -186,3 +186,24 @@ body {
         transform: translateY(0);
     }
 }
+
+/* ── PARTÍCULAS ── */
+.particula {
+    position: fixed;
+    pointer-events: none;
+    border-radius: 50%;
+    z-index: 9999;
+    animation: volar 1.2s ease-out forwards;
+}
+
+@keyframes volar {
+    0% {
+        opacity: 1;
+        transform: translate(0, 0) scale(1);
+    }
+
+    100% {
+        opacity: 0;
+        transform: translate(var(--dx), var(--dy)) scale(0.2);
+    }
+}

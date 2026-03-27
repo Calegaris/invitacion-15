@@ -1,4 +1,4 @@
-/* ── FONDO CON FOTO ── */
+/* ── FONDO CON SLIDESHOW ── */
 body {
   min-height: 100vh;
   background-color: #080f1a;
@@ -12,30 +12,44 @@ body {
   padding-bottom: 5rem;
   animation: fadeUp 1s ease both;
   position: relative;
-
-  background-image: url('fotos/sofia.png');
-  background-size: cover;
-  background-position: center top;
-  background-repeat: no-repeat;
 }
 
-.pagina::before {
-  content: '';
+.slide-bg {
   position: fixed;
   inset: 0;
-  background: linear-gradient(
-    to bottom,
-    rgba(8, 15, 26, 0.55) 0%,
-    rgba(8, 15, 26, 0.45) 40%,
-    rgba(8, 15, 26, 0.75) 75%,
-    rgba(8, 15, 26, 0.95) 100%
-  );
   z-index: 0;
 }
 
-.pagina > * {
-  position: relative;
+.slide-bg img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  opacity: 0;
+  transition: opacity 1.5s ease;
+}
+
+.slide-bg img.activa {
+  opacity: 1;
+}
+
+.slide-bg::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom,
+      rgba(8, 15, 26, 0.55) 0%,
+      rgba(8, 15, 26, 0.45) 40%,
+      rgba(8, 15, 26, 0.75) 75%,
+      rgba(8, 15, 26, 0.95) 100%);
   z-index: 1;
+}
+
+.pagina>*:not(.slide-bg) {
+  position: relative;
+  z-index: 2;
 }
 
 /* ── ENCABEZADO ── */
@@ -54,7 +68,7 @@ body {
   font-weight: 400;
   color: #ffffff;
   line-height: 1.1;
-  text-shadow: 0 2px 20px rgba(0,0,0,0.5);
+  text-shadow: 0 2px 20px rgba(0, 0, 0, 0.5);
 }
 
 .fecha-chica {
