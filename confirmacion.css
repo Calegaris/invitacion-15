@@ -55,7 +55,7 @@ body {
 /* ── ENCABEZADO ── */
 #encabezado {
   text-align: center;
-  padding: 6rem 2rem 1.5rem;
+  padding: 8rem 2rem 1.5rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -101,7 +101,7 @@ body {
 
 /* ── CONTADOR ── */
 #contador {
-  padding: 2rem 2rem;
+  padding: 3rem 2rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -166,7 +166,7 @@ body {
 /* ── CONFIRMACIÓN ── */
 #confirmacion {
   text-align: center;
-  padding: 2.5rem 2rem 0;
+  padding: 3rem 2rem 0;
   display: flex;
   flex-direction: column;
   align-items: center;
