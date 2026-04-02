@@ -1,7 +1,7 @@
 /* ── FONDO CON SLIDESHOW ── */
 body {
   min-height: 100vh;
-  background-color: #080f1a;
+  background-color: #0f0508;
 }
 
 .pagina {
@@ -39,15 +39,17 @@ body {
   content: '';
   position: absolute;
   inset: 0;
-  background: linear-gradient(to bottom,
-      rgba(8, 15, 26, 0.55) 0%,
-      rgba(8, 15, 26, 0.45) 40%,
-      rgba(8, 15, 26, 0.75) 75%,
-      rgba(8, 15, 26, 0.95) 100%);
+  background: linear-gradient(
+    to bottom,
+    rgba(15, 5, 8, 0.55) 0%,
+    rgba(15, 5, 8, 0.45) 40%,
+    rgba(15, 5, 8, 0.75) 75%,
+    rgba(15, 5, 8, 0.95) 100%
+  );
   z-index: 1;
 }
 
-.pagina>*:not(.slide-bg) {
+.pagina > *:not(.slide-bg) {
   position: relative;
   z-index: 2;
 }
@@ -75,14 +77,14 @@ body {
   font-size: 0.75rem;
   letter-spacing: 0.4em;
   text-transform: uppercase;
-  color: #7aaee8;
+  color: #c47a8a;
   opacity: 1;
 }
 
 .fecha-chica {
   font-size: 0.75rem;
   letter-spacing: 0.4em;
-  color: #7aaee8;
+  color: #c47a8a;
   opacity: 1;
   margin-top: 0.3rem;
 }
@@ -90,11 +92,11 @@ body {
 .linea-decorativa {
   width: 60px;
   height: 1px;
-  background: linear-gradient(to right, transparent, #7aaee8, transparent);
+  background: linear-gradient(to right, transparent, #7B152E, transparent);
   margin: 0.3rem 0;
 }
 
-/* ── FOTO — no se muestra como sección ── */
+/* ── FOTO ── */
 #foto-sofia {
   display: none;
 }
@@ -112,7 +114,7 @@ body {
   font-size: 0.7rem;
   letter-spacing: 0.4em;
   text-transform: uppercase;
-  color: #7aaee8;
+  color: #c47a8a;
   opacity: 1;
 }
 
@@ -121,12 +123,12 @@ body {
   gap: 0;
   flex-wrap: nowrap;
   justify-content: center;
-  border: 1px solid rgba(122, 174, 232, 0.3);
+  border: 1px solid rgba(123, 21, 46, 0.5);
   border-radius: 4px;
   overflow: hidden;
   backdrop-filter: blur(8px);
-  background: rgba(8, 15, 26, 0.4);
-  box-shadow: 0 0 30px rgba(91, 143, 219, 0.1);
+  background: rgba(15, 5, 8, 0.45);
+  box-shadow: 0 0 30px rgba(123, 21, 46, 0.15);
 }
 
 .bloque {
@@ -135,12 +137,12 @@ body {
   align-items: center;
   gap: 0.3rem;
   padding: 1.2rem 1.6rem;
-  border-right: 1px solid rgba(122, 174, 232, 0.15);
+  border-right: 1px solid rgba(123, 21, 46, 0.3);
   transition: background 0.3s;
 }
 
 .bloque:hover {
-  background: rgba(91, 143, 219, 0.12);
+  background: rgba(123, 21, 46, 0.15);
 }
 
 .bloque:last-child {
@@ -159,7 +161,7 @@ body {
   font-size: 0.6rem;
   letter-spacing: 0.3em;
   text-transform: uppercase;
-  color: #7aaee8;
+  color: #c47a8a;
   opacity: 1;
 }
 
@@ -177,29 +179,29 @@ body {
   font-size: 0.75rem;
   letter-spacing: 0.35em;
   text-transform: uppercase;
-  color: #e8edf5;
+  color: #f0e8ea;
   opacity: 0.85;
 }
 
 .whatsapp-btn {
   display: inline-block;
   padding: 0.9rem 2.5rem;
-  border: 1px solid rgba(122, 174, 232, 0.5);
-  color: #7aaee8;
+  border: 1px solid rgba(123, 21, 46, 0.7);
+  color: #c47a8a;
   text-decoration: none;
   font-size: 0.85rem;
   letter-spacing: 0.25em;
   text-transform: uppercase;
   border-radius: 2px;
   backdrop-filter: blur(4px);
-  background: rgba(8, 15, 26, 0.3);
+  background: rgba(15, 5, 8, 0.3);
   transition: background 0.3s, color 0.3s, box-shadow 0.3s;
 }
 
 .whatsapp-btn:hover {
-  background: #7aaee8;
-  color: #080f1a;
-  box-shadow: 0 0 20px rgba(122, 174, 232, 0.3);
+  background: #7B152E;
+  color: #f0e8ea;
+  box-shadow: 0 0 20px rgba(123, 21, 46, 0.4);
 }
 
 /* ── DIRECCIÓN ── */
@@ -210,20 +212,20 @@ body {
   align-items: center;
   gap: 0.4rem;
   padding-top: 1.5rem;
-  border-top: 1px solid rgba(122, 174, 232, 0.15);
+  border-top: 1px solid rgba(123, 21, 46, 0.25);
   width: 100%;
   max-width: 320px;
 }
 
 .direccion-texto {
   font-size: 0.9rem;
-  color: #e8edf5;
+  color: #f0e8ea;
   letter-spacing: 0.12em;
 }
 
 .direccion-sub {
   font-size: 0.72rem;
-  color: #e8edf5;
+  color: #f0e8ea;
   opacity: 0.6;
   letter-spacing: 0.15em;
 }
@@ -233,7 +235,7 @@ body {
   font-size: 0.72rem;
   letter-spacing: 0.3em;
   text-transform: uppercase;
-  color: #7aaee8;
+  color: #c47a8a;
   text-decoration: none;
   opacity: 0.85;
   transition: opacity 0.3s;

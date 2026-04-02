@@ -28,8 +28,8 @@ function lanzarParticulas() {
     const cy = rect.top + rect.height / 2;
 
     const colores = [
-        '#7aaee8', '#a8c8f0', '#ffffff',
-        '#4a7fc1', '#c8dff5', '#e8f0fc'
+        '#7B152E', '#c47a8a', '#ffffff',
+        '#a03050', '#e8c0c8', '#f0e8ea'
     ];
 
     for (let i = 0; i < 32; i++) {
