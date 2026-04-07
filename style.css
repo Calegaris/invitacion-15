@@ -25,7 +25,7 @@ body {
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding: 2rem;
+  padding: 1rem;
   background: radial-gradient(ellipse at center, #2a0810 0%, #0f0508 70%);
   overflow: hidden;
 }
@@ -41,10 +41,11 @@ body {
 /* ── TIPOGRAFÍA ── */
 .nombre-script {
   font-family: 'Great Vibes', cursive;
-  font-size: clamp(3rem, 12vw, 6rem);
+  font-size: clamp(2rem, 8vw, 6rem);
   font-weight: 400;
   color: #ffffff;
   line-height: 1.1;
+  margin: 0 0.5rem;
 }
 
 .pre-titulo {
@@ -57,19 +58,27 @@ body {
 
 /* ── SOBRE WRAPPER ── */
 .sobre-wrapper {
-  margin-top: 2.5rem;
+  margin-top: 1.5rem;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 1.5rem;
+  gap: 1rem;
   cursor: pointer;
+}
+
+@media (min-width: 640px) {
+  .sobre-wrapper {
+    margin-top: 2.5rem;
+    gap: 1.5rem;
+  }
 }
 
 /* ── SOBRE ── */
 .sobre {
   position: relative;
-  width: 280px;
-  height: 196px;
+  width: min(280px, 90vw);
+  height: auto;
+  aspect-ratio: 10 / 7;
   transform-style: preserve-3d;
 }
 
@@ -167,7 +176,7 @@ body {
 
 /* ── INSTRUCCIÓN MEJORADA ── */
 .instruccion {
-  font-size: 1.1rem;
+  font-size: 0.9rem;
   letter-spacing: 0.25em;
   text-transform: uppercase;
   color: #f0e8ea;
@@ -176,6 +185,13 @@ body {
   flex-direction: column;
   align-items: center;
   gap: 0.4rem;
+  padding: 0 1rem;
+}
+
+@media (min-width: 640px) {
+  .instruccion {
+    font-size: 1.1rem;
+  }
 }
 
 .flecha-sello {
@@ -191,6 +207,7 @@ body {
     opacity: 0;
     transform: translateY(30px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -198,8 +215,15 @@ body {
 }
 
 @keyframes rebote {
-  0%, 100% { transform: translateY(0); }
-  50%       { transform: translateY(8px); }
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(8px);
+  }
 }
 
 /* ── PARTÍCULAS ── */
@@ -216,6 +240,7 @@ body {
     opacity: 1;
     transform: translate(0, 0) scale(1);
   }
+
   100% {
     opacity: 0;
     transform: translate(var(--dx), var(--dy)) scale(0.2);
