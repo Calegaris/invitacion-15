@@ -115,3 +115,31 @@ if (slides.length) {
         slides[actual].classList.add('activa');
     }, 4000);
 }
+
+// ── REPRODUCTOR SPOTIFY MINIMIZABLE ──
+const headerToggleReproductor = document.getElementById('reproductor-header-toggle');
+const reproductorContainer = document.getElementById('reproductor-wrapper');
+
+if (headerToggleReproductor && reproductorContainer) {
+    // Recuperar estado guardado
+    const estadoReproductor = localStorage.getItem('reproductor-estado') || 'expandido';
+    reproductorContainer.classList.remove('expandido', 'minimizado');
+    reproductorContainer.classList.add(estadoReproductor);
+
+    // Toggle al hacer click en el header
+    headerToggleReproductor.addEventListener('click', () => {
+        reproductorContainer.classList.toggle('minimizado');
+        reproductorContainer.classList.toggle('expandido');
+
+        // Guardar estado
+        const nuevoEstado = reproductorContainer.classList.contains('expandido') ? 'expandido' : 'minimizado';
+        localStorage.setItem('reproductor-estado', nuevoEstado);
+    });
+
+    // Cerrar con tecla Escape (opcional)
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && reproductorContainer.classList.contains('expandido')) {
+            headerToggleReproductor.click();
+        }
+    });
+}

@@ -74,12 +74,23 @@
 
   </div>
 
-  <!-- REPRODUCTOR SPOTIFY -->
-  <iframe src="https://open.spotify.com/embed/playlist/6FEVoJQxlOti4NIRlbBqHU?utm_source=generator" width="100%"
-    height="80" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-    loading="lazy"
-    style="position:fixed; bottom:0; left:0; right:0; z-index:9997; border-radius:0; border-top: 1px solid rgba(123,21,46,0.4); max-height: 90px;">
-  </iframe>
+  <!-- REPRODUCTOR SPOTIFY CUSTOM -->
+  <div id="reproductor-wrapper" class="reproductor-container expandido">
+    <div class="reproductor-header" id="reproductor-header-toggle" title="Minimizar/Maximizar">
+      <div class="reproductor-info">
+        <span class="spotify-icon">♪</span>
+        <div>
+          <span class="reproductor-titulo">Playlist para tu invitación</span>
+        </div>
+      </div>
+    </div>
+    <div class="reproductor-content">
+      <iframe src="https://open.spotify.com/embed/playlist/6FEVoJQxlOti4NIRlbBqHU?utm_source=generator" width="100%"
+        height="80" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+        loading="lazy" class="reproductor-iframe">
+      </iframe>
+    </div>
+  </div>
 
   <script src="script.js"></script>
 </body>
