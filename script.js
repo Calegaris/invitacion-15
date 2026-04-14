@@ -62,7 +62,7 @@ function lanzarParticulas() {
 }
 
 // ── CONTADOR (confirmacion.html) ──
-const fechaFiesta = new Date('2026-04-18T21:00:00');
+const fechaFiesta = new Date('2026-05-30T21:00:00');
 
 function actualizarContador() {
     const ahora = new Date();
@@ -141,5 +141,19 @@ if (headerToggleReproductor && reproductorContainer) {
         if (e.key === 'Escape' && reproductorContainer.classList.contains('expandido')) {
             headerToggleReproductor.click();
         }
+    });
+}
+
+// ── AUDIO DE FONDO ──
+const audioFondo = document.getElementById('audio-fondo');
+if (audioFondo) {
+    audioFondo.volume = 0.2; // Volumen bajo para no interferir
+    window.addEventListener('load', () => {
+        audioFondo.play().catch(() => {
+            // Si autoplay está bloqueado, reproducir al primer click
+            document.addEventListener('click', () => {
+                audioFondo.play();
+            }, { once: true });
+        });
     });
 }

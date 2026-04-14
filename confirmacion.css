@@ -267,6 +267,21 @@ body {
   }
 }
 
+.espera-label {
+  font-size: 0.6rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: #c47a8a;
+  opacity: 0.8;
+  margin-bottom: 0.5rem;
+}
+
+@media (min-width: 768px) {
+  .espera-label {
+    font-size: 0.7rem;
+  }
+}
+
 .whatsapp-btn {
   display: inline-block;
   padding: 0.75rem 1.8rem;
@@ -466,6 +481,18 @@ body {
   }
 }
 
+@keyframes latido {
+
+  0%,
+  100% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.05);
+  }
+}
+
 .reproductor-titulo {
   font-size: 0.9rem;
   color: #f0e8ea;
@@ -474,6 +501,7 @@ body {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  animation: latido 2s ease-in-out infinite;
 }
 
 
