@@ -100,7 +100,7 @@ if (document.getElementById('dias')) {
 // ── BOTÓN WHATSAPP ──
 const btn = document.getElementById('btnWhatsapp');
 if (btn) {
-    const numeroMama = '5491112345678';
+    const numeroMama = '5491156699008';
     const mensaje = encodeURIComponent('¡Hola! Confirmo que voy a estar en los 15 de Sofía 🎉');
     btn.href = `https://wa.me/${numeroMama}?text=${mensaje}`;
 }
